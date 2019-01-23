@@ -41,6 +41,13 @@ services:
             $accessTokenRepository: '@App\Infrastructure\OAuth2Server\Bridge\AccessTokenRepository'
             $publicKey: '%kernel.project_dir%/%env(OAUTH2_PUBLIC_KEY)%'
 
+
+    # Fixtures
+    App\Infrastructure\Persistence\Doctrine\DataFixtures\:
+        resource: '../src/Infrastructure/Persistence/Doctrine/DataFixtures/*'
+        tags: [ 'doctrine.fixture.orm' ]
+
+
     # Interfaces
 
     ### UI
