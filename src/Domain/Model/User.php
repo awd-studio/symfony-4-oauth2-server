@@ -23,13 +23,6 @@ class User implements UserInterface
     /**
      * @var string
      *
-     * @ORM\Column(type="string")
-     */
-    private $name;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
@@ -65,17 +58,15 @@ class User implements UserInterface
     /**
      * User constructor.
      * @param string $email
-     * @param string $name
      */
-    private function __construct(string $email, string $name)
+    private function __construct(string $email)
     {
         $this->email = $email;
-        $this->name = $name;
     }
 
-    public static function create(string $email, string $name): User
+    public static function create(string $email): User
     {
-        return new self($email, $name);
+        return new self($email);
     }
 
     public function getId()
@@ -96,16 +87,6 @@ class User implements UserInterface
     public function setEmail(string $email): void
     {
         $this->email = $email;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
     }
 
     /**

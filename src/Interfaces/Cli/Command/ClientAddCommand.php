@@ -49,6 +49,6 @@ class ClientAddCommand extends Command
         $this->objectManager->flush();
 
         $id = (string)$client->getId();
-        $io->success(sprintf('Created the client "%s" with ID: %s', $name, $id));
+        $io->success(sprintf('Client "%s" created with an ID: %s', $name, $id));
     }
 }

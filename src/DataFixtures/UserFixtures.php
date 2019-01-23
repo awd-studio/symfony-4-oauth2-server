@@ -22,7 +22,7 @@ class UserFixtures extends Fixture
 
         foreach ($users as $name) {
             $email = "{$name}@test.mail";
-            $user = User::create($email, $name);
+            $user = User::create($email);
             $password = $this->encoder->encodePassword($user, $name);
             $user->setPassword($password);
             $manager->persist($user);
