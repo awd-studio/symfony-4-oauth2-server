@@ -2,7 +2,7 @@
 
 namespace App\Application\EventSubscriber;
 
-use App\Presentation\Api\Rest\Controller\TokenAuthenticatedController;
+use App\Interfaces\Api\Rest\Controller\TokenAuthenticatedController;
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\ResourceServer;
 use Psr\Http\Message\ServerRequestInterface;

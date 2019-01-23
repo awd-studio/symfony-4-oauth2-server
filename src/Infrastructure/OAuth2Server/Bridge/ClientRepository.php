@@ -15,7 +15,7 @@ final class ClientRepository implements ClientRepositoryInterface
 
     /**
      * ClientRepository constructor.
-     * @param AppClientRepositoryInterface $clientRepository
+     * @param \App\Domain\Repository\ClientRepositoryInterface $appClientRepository
      */
     public function __construct(AppClientRepositoryInterface $appClientRepository)
     {
