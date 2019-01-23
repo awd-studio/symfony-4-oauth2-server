@@ -5,7 +5,10 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-.idea/
+
+###> oauth2 ###
+/config/oauth2/*.key
+###< oauth2 ###
 
 ###> symfony/web-server-bundle ###
 /.web-server-pid
