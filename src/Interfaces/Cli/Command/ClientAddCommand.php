@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Interfaces\Cli\Command;
 
 use App\Domain\Model\Client;
 use Doctrine\Common\Persistence\ObjectManager;

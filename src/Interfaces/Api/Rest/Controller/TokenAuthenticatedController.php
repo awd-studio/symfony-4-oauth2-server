@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Presentation\Api\Rest\Controller;
+namespace App\Interfaces\Api\Rest\Controller;
 
 interface TokenAuthenticatedController
 {

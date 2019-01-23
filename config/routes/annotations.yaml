@@ -1,4 +1,4 @@
 api_rest:
-    resource: ../../src/Presentation/Api/Rest/Controller/
+    resource: ../../src/Interfaces/Api/Rest/Controller/
     type: annotation
     prefix: /api/v1

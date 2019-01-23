@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Presentation\Api\Rest\Controller;
+namespace App\Interfaces\Api\Rest\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class TestController
- * @package App\Presentation\Api\Rest\Controller
+ * @package App\Interfaces\Api\Rest\Controller
  */
 final class TestController implements TokenAuthenticatedController
 {

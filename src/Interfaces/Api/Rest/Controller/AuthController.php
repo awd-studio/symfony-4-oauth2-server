@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Presentation\Api\Rest\Controller;
+namespace App\Interfaces\Api\Rest\Controller;
 
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Exception\OAuthServerException;

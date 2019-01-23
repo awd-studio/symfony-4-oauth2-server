@@ -20,12 +20,6 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Presentation\Api\Rest\Controller\:
-        resource: '../src/Presentation/Api/Rest/Controller'
-        tags: ['controller.service_arguments']
-
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
@@ -46,3 +40,13 @@ services:
         arguments:
             $accessTokenRepository: '@App\Infrastructure\OAuth2Server\Bridge\AccessTokenRepository'
             $publicKey: '%kernel.project_dir%/%env(OAUTH2_PUBLIC_KEY)%'
+
+    # Interfaces
+
+    ### UI
+    App\Interfaces\Cli\Command\:
+        resource: '../src/Interfaces/Cli/Command'
+
+    App\Interfaces\Api\Rest\Controller\:
+        resource: '../src/Interfaces/Api/Rest/Controller/*'
+        tags: [ 'controller.service_arguments' ]
