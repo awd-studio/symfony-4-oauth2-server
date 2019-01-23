@@ -110,6 +110,7 @@ clear: ## Clear the dist
 ###> total reinstalation ###
 init: ## Reinstall all DB data with fixtures
 	@export MAKEFLAGS=--no-print-directory
+	@${MAKE} drop-db --no-print-directory
 	@${MAKE} clear --no-print-directory
 	@${MAKE} generate-keys --no-print-directory
 	@${MAKE} migrate --no-print-directory
