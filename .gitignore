@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env
 /public/bundles/
@@ -7,9 +6,9 @@
 ###< symfony/framework-bundle ###
 
 ###> oauth2 ###
-/config/oauth2/*.key
+/config/oauth2/
 ###< oauth2 ###
 
 ###> symfony/web-server-bundle ###
-/.web-server-pid
+/bin/.web-server-pid
 ###< symfony/web-server-bundle ###
