@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Model;
+namespace App\Domain\User;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;

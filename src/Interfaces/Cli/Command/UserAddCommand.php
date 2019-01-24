@@ -2,7 +2,7 @@
 
 namespace App\Interfaces\Cli\Command;
 
-use App\Domain\Model\User;
+use App\Domain\User\User;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Exception\InvalidArgumentException;

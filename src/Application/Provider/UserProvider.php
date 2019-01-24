@@ -2,8 +2,8 @@
 
 namespace App\Application\Provider;
 
-use App\Domain\Model\User;
-use App\Domain\Repository\UserRepositoryInterface;
+use App\Domain\User\User;
+use App\Domain\User\Repository\UserRepositoryInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -30,7 +30,7 @@ final class UserProvider implements UserProviderInterface
         return $this->findUsername($username);
     }
 
-    private function findUsername(string $username): User
+    private function findUsername(string $username): UserInterface
     {
         $user = $this->userRepository->findOneByEmailOrPhone($username);
         if ($user !== null) {

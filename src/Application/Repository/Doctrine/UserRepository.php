@@ -2,8 +2,8 @@
 
 namespace App\Application\Repository\Doctrine;
 
-use App\Domain\Model\User;
-use App\Domain\Repository\UserRepositoryInterface;
+use App\Domain\User\User;
+use App\Domain\User\Repository\UserRepositoryInterface;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Ramsey\Uuid\UuidInterface;

@@ -5,7 +5,7 @@ namespace App\Infrastructure\OAuth2Server\Bridge;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Entities\UserEntityInterface;
 use League\OAuth2\Server\Repositories\UserRepositoryInterface;
-use App\Domain\Repository\UserRepositoryInterface as AppUserRepositoryInterface;
+use App\Domain\User\Repository\UserRepositoryInterface as AppUserRepositoryInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 final class UserRepository implements UserRepositoryInterface

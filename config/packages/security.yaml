@@ -3,7 +3,7 @@ security:
         database:
             id: App\Application\Provider\UserProvider
     encoders:
-        App\Domain\Model\User: argon2i
+        App\Domain\User\User: argon2i
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/

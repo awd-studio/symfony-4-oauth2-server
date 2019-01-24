@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Repository;
+namespace App\Domain\User\Repository;
 
-use App\Domain\Model\User;
+use App\Domain\User\User;
 use Ramsey\Uuid\UuidInterface;
 
 interface UserRepositoryInterface
