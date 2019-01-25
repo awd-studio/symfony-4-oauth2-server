@@ -47,13 +47,10 @@ final class UserRepository implements UserRepositoryInterface
             return null;
         }
 
-        $encodedPassword = $this->userPasswordEncoder->encodePassword($appUser, $password);
-        $isPasswordValid = $this->userPasswordEncoder->isPasswordValid($appUser, $encodedPassword);
-        if ($isPasswordValid) {
+        if (!$this->userPasswordEncoder->isPasswordValid($appUser, $password)) {
             return null;
         }
 
-        $oAuthUser = new User($appUser->getId()->toString());
-        return $oAuthUser;
+        return new User($appUser->getId()->toString());
     }
 }
