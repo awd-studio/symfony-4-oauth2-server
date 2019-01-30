@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\OAuth2Server\Bridge;
 
-use App\Domain\Repository\AccessTokenRepositoryInterface as AppAccessTokenRepositoryInterface;
-use App\Domain\Model\AccessToken as AppAccessToken;
+use App\Domain\User\Entity\AccessToken\AccessTokenRepositoryInterface as AppAccessTokenRepositoryInterface;
+use App\Domain\User\Entity\AccessToken\AccessToken as AppAccessToken;
 use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;

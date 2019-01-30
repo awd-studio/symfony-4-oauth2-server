@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Domain\Model;
+namespace App\Domain\Client;
 
+use App\Domain\Client\VO\ClientId;
+use App\Domain\Shared\VO\UuidId;
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\Uuid;
 
 /**
  * @ORM\Entity
@@ -49,18 +52,22 @@ class Client
 
     /**
      * Client constructor.
+     *
+     * @param UuidId $clientId
      * @param string $name
      * @param string $secret
      */
-    private function __construct(string $name, string $secret)
+    private function __construct(UuidId $clientId, string $name, string $secret)
     {
+        $this->id = $clientId->toString();
         $this->name = $name;
         $this->secret = $secret;
     }
 
     public static function create(string $name, string $secret): Client
     {
-        $client = new self($name, $secret);
+        $clientId = ClientId::fromString(Uuid::uuid4()->toString());
+        $client = new self($clientId, $name, $secret);
         $redirect = 'test/redirect';
         $client->setRedirect($redirect);
 

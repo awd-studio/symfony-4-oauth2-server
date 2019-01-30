@@ -2,8 +2,8 @@
 
 namespace App\Application\Repository\Doctrine;
 
-use App\Domain\Model\Client;
-use App\Domain\Repository\ClientRepositoryInterface;
+use App\Domain\Client\Client;
+use App\Domain\Client\Repository\ClientRepositoryInterface;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 

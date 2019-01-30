@@ -4,8 +4,8 @@ namespace App\Infrastructure\OAuth2Server\Bridge;
 
 use League\OAuth2\Server\Entities\RefreshTokenEntityInterface;
 use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
-use App\Domain\Repository\RefreshTokenRepositoryInterface as AppRefreshTokenRepositoryInterface;
-use App\Domain\Model\RefreshToken as AppRefreshToken;
+use App\Domain\User\Entity\RefreshToken\RefreshTokenRepositoryInterface as AppRefreshTokenRepositoryInterface;
+use App\Domain\User\Entity\RefreshToken\RefreshToken as AppRefreshToken;
 
 final class RefreshTokenRepository implements RefreshTokenRepositoryInterface
 {

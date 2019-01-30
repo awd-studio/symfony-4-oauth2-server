@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Persistence\Doctrine\DataFixtures;
 
-use App\Domain\Model\Client;
+use App\Domain\Client\Client;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 

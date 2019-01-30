@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Model;
+namespace App\Domain\User\Entity\RefreshToken;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class RefreshToken
 {
     /**
-     * @var string
+     * @var \Ramsey\Uuid\UuidInterface
      *
      * @ORM\Id
      * @ORM\Column(type="uuid_binary_ordered_time", unique=true)
@@ -42,8 +42,9 @@ class RefreshToken
 
     /**
      * RefreshToken constructor.
-     * @param string $id
-     * @param string $accessTokenId
+     *
+     * @param string    $id
+     * @param string    $accessTokenId
      * @param \DateTime $expiresAt
      */
     public function __construct(string $id, string $accessTokenId, \DateTime $expiresAt)

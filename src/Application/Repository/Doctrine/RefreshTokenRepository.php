@@ -2,8 +2,8 @@
 
 namespace App\Application\Repository\Doctrine;
 
-use App\Domain\Model\RefreshToken;
-use App\Domain\Repository\RefreshTokenRepositoryInterface;
+use App\Domain\User\Entity\RefreshToken\RefreshToken;
+use App\Domain\User\Entity\RefreshToken\RefreshTokenRepositoryInterface;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 

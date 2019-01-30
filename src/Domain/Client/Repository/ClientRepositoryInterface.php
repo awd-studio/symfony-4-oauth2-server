@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Repository;
+namespace App\Domain\Client\Repository;
 
-use App\Domain\Model\Client;
+use App\Domain\Client\Client;
 
 interface ClientRepositoryInterface
 {

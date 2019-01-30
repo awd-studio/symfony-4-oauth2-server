@@ -2,8 +2,8 @@
 
 namespace App\Application\Repository\Doctrine;
 
-use App\Domain\Model\AccessToken;
-use App\Domain\Repository\AccessTokenRepositoryInterface;
+use App\Domain\User\Entity\AccessToken\AccessToken;
+use App\Domain\User\Entity\AccessToken\AccessTokenRepositoryInterface;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 

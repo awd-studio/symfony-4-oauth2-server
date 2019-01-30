@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\OAuth2Server\Bridge;
 
-use App\Domain\Repository\ClientRepositoryInterface as AppClientRepositoryInterface;
+use App\Domain\Client\Repository\ClientRepositoryInterface as AppClientRepositoryInterface;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\ClientRepositoryInterface;
 
@@ -15,7 +15,8 @@ final class ClientRepository implements ClientRepositoryInterface
 
     /**
      * ClientRepository constructor.
-     * @param \App\Domain\Repository\ClientRepositoryInterface $appClientRepository
+     *
+     * @param AppClientRepositoryInterface $appClientRepository
      */
     public function __construct(AppClientRepositoryInterface $appClientRepository)
     {

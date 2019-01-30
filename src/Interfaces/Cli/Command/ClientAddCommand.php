@@ -2,7 +2,7 @@
 
 namespace App\Interfaces\Cli\Command;
 
-use App\Domain\Model\Client;
+use App\Domain\Client\Client;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

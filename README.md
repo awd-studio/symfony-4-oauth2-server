@@ -26,7 +26,9 @@ Start the server:
 php bin/console server:start 127.0.0.1:8080
 ```
 
-Get access token (example): 
+#### Get access token (example): 
+
+Use the swagger UI (at http://127.0.0.1:8080/api/doc), or do a request manually:
 ```
 POST http://127.0.0.1:8080/api/v1/oauth/token
 Accept: */*

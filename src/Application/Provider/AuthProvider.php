@@ -1,17 +1,26 @@
 <?php
 
-namespace App\Interfaces\Api\Rest\Controller;
+/**
+ * This file is part of v2.0 PHP library.
+ *
+ * @author  Anton Karpov <awd.com.ua@gmail.com>
+ * @license http://www.opensource.org/licenses/mit-license.php MIT
+ * @link    https://github.com/awd-studio/v2.0
+ */
 
+declare(strict_types=1); // strict mode
+
+namespace App\Application\Provider;
+
+use App\Domain\User\Auth\AuthProviderInterface;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\Grant\PasswordGrant;
 use Psr\Http\Message\ServerRequestInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Zend\Diactoros\Response as Psr7Response;
 
-final class AuthController extends AbstractController
+final class AuthProvider implements AuthProviderInterface
 {
     /**
      * @var AuthorizationServer
@@ -25,8 +34,9 @@ final class AuthController extends AbstractController
 
     /**
      * AuthController constructor.
+     *
      * @param AuthorizationServer $authorizationServer
-     * @param PasswordGrant $passwordGrant
+     * @param PasswordGrant       $passwordGrant
      */
     public function __construct(
         AuthorizationServer $authorizationServer,
@@ -37,8 +47,8 @@ final class AuthController extends AbstractController
     }
 
     /**
-     * @Route("oauth/token", name="api_get_access_token", methods={"POST"})
      * @param ServerRequestInterface $request
+     *
      * @return null|Psr7Response
      * @throws \Exception
      */

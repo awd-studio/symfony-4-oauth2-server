@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Model;
+namespace App\Domain\User\Entity\AccessToken;
 
 use Doctrine\ORM\Mapping as ORM;
 

@@ -2,7 +2,10 @@
 
 namespace App\Domain\User;
 
+use App\Domain\Shared\VO\UuidId;
+use App\Domain\User\VO\UserId;
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\Uuid;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -57,16 +60,20 @@ class User implements UserInterface
 
     /**
      * User constructor.
+     *
+     * @param UuidId $userId
      * @param string $email
      */
-    private function __construct(string $email)
+    private function __construct(UuidId $userId, string $email)
     {
+        $this->id = $userId->toString();
         $this->email = $email;
     }
 
     public static function create(string $email): User
     {
-        return new self($email);
+        $userId = UserId::fromString(Uuid::uuid4()->toString());
+        return new self($userId, $email);
     }
 
     public function getId()
