@@ -5,6 +5,10 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
 
+    app.name: '%env(APP_NAME)%'
+    app.description: '%env(APP_DESCRIPTION)%'
+    app.api.version: '%env(API_VERSION)%'
+
 services:
     # default configuration for services in *this* file
     _defaults:
